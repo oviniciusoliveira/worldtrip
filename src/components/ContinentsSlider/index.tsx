@@ -2,13 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { SlideItem } from "./SlideItem";
-
-type Continent = {
-  title: string;
-  subtitle?: string;
-  alt: string;
-  file: string;
-};
+import { Continent } from "../../types/continent";
 
 type ContinentsSliderProps = {
   continents: Continent[];
@@ -33,7 +27,7 @@ export function ContinentsSlider({ continents }: ContinentsSliderProps) {
       >
         {continents.map((continent) => (
           <SwiperSlide key={continent.title}>
-            <SlideItem {...continent} />
+            <SlideItem {...continent} link={`/continent/${continent.slug}`} />
           </SwiperSlide>
         ))}
       </Swiper>

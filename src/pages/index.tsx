@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <Banner />
-      <Content mt={50}>
+      <Content mt="24">
         <TravelTypes />
       </Content>
       <ContentDivider />
