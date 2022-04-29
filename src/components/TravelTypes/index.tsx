@@ -3,7 +3,11 @@ import { TravelTypeItem } from "./TravelTypeItem";
 
 export function TravelTypes() {
   return (
-    <Grid width={"100%"} templateColumns="repeat(5, 1fr)" gap={6}>
+    <Grid
+      width={"100%"}
+      templateColumns="repeat(auto-fit, minmax(100px, 1fr))"
+      gap={6}
+    >
       <TravelTypeItem
         alt="Nightlife"
         src="/assets/icons/cocktail.png"

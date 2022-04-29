@@ -25,7 +25,7 @@ export function Banner() {
           </Text>
         </Flex>
 
-        <Flex align="center" mb="-36">
+        <Flex align="center" mb="-36" display={["none", "none", "none", "flex"]}>
           <Image
             src="/assets/images/airplane.png"
             alt="Airplane"

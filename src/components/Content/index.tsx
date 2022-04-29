@@ -3,11 +3,13 @@ import { Flex, FlexProps } from "@chakra-ui/react";
 type ContentProps = {
   children: React.ReactNode;
   addMarginY?: boolean;
+  addPaddingX?: boolean;
 } & FlexProps;
 
 export function Content({
   children,
   addMarginY = true,
+  addPaddingX = true,
   ...props
 }: ContentProps) {
   return (
@@ -16,7 +18,7 @@ export function Content({
       width="100%"
       mx="auto"
       my={addMarginY ? "10" : "0"}
-      px={14}
+      px={addPaddingX ? 14 : 0}
       {...props}
     >
       {children}

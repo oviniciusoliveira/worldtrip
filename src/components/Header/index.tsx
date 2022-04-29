@@ -1,5 +1,4 @@
-import { Flex, Box } from "@chakra-ui/react";
-import Image from "next/image";
+import { Flex, Box, Image } from "@chakra-ui/react";
 import { Content } from "../Content";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
@@ -12,7 +11,7 @@ export function Header({ backButton = false }: HeaderProps) {
   const router = useRouter();
 
   return (
-    <Flex as="header" w="100%" h="20" p="5">
+    <Flex as="header" w="100%" h={20} alignItems="center">
       <Content addMarginY={false}>
         <Flex alignItems="center" w="100%">
           {backButton && (
@@ -32,8 +31,6 @@ export function Header({ backButton = false }: HeaderProps) {
             <Image
               alt="Logo worldtrip"
               src="/assets/images/world-trip-logo.png"
-              width={184}
-              height={46}
             />
           </Box>
         </Flex>

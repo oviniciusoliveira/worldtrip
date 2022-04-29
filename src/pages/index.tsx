@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         <Text>Vamos nessa?</Text>
         <Text>Então escolha seu continente</Text>
       </Content>
-      <Content>
+      <Content addPaddingX={false} addMarginY={false} marginTop={14}>
         <ContinentsSlider continents={continents} />
       </Content>
     </>

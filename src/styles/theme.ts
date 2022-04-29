@@ -12,6 +12,15 @@ export const theme = extendTheme({
   },
   styles: {
     global: {
+      html: {
+        fontSize: {
+          base: "75%",
+          sm: "85%",
+          md: "95%",
+          lg: "100%",
+          xl: "100%",
+        },
+      },
       body: {
         color: "gray.700",
       },
