@@ -4,15 +4,8 @@ import { useRouter } from "next/router";
 import { useContinents } from "../../hooks/useContinents";
 import { useContinentCities } from "../../hooks/useContinentCities";
 import { ContinentBanner } from "../../components/ContinentBanner";
-import {
-  Flex,
-  Text,
-  SimpleGrid,
-  Grid,
-  Box,
-  Image,
-  GridItem,
-} from "@chakra-ui/react";
+import { CityCard } from "../../components/CityCard";
+import { Flex, Text, SimpleGrid, Grid, GridItem } from "@chakra-ui/react";
 import { Content } from "../../components/Content";
 import { NumberInfo } from "../../components/NumberInfo";
 
@@ -67,43 +60,12 @@ export default function ContinentPage() {
               >
                 {topVisitedCities.map((city) => (
                   <GridItem key={city.id} w="100%">
-                    <Box
-                      maxW="sm"
-                      borderWidth="1px"
-                      borderRadius="lg"
-                      overflow="hidden"
-                      borderColor="rgba(255, 186, 8, 0.5)"
-                    >
-                      <Image src={city.imageFile} alt={city.name} />
-
-                      <Flex
-                        p="6"
-                        justifyContent="space-between"
-                        alignItems="center"
-                      >
-                        <Flex flexDirection="column">
-                          <Text as="h2" fontWeight="medium" fontSize="xl">
-                            {city.name}
-                          </Text>
-
-                          <Text as="h3" color="gray.500" fontSize="sm" mt={3}>
-                            {city.country.name}
-                          </Text>
-                        </Flex>
-                        <Flex
-                          w="30px"
-                          h="30px"
-                          borderRadius="50%"
-                          overflow="hidden"
-                        >
-                          <Image
-                            src={city.country.flag}
-                            alt={city.country.name}
-                            w="40px"
-                          />
-                        </Flex>
-                      </Flex>
-                    </Box>
+                    <CityCard
+                      cityImage={city.imageFile}
+                      cityName={city.name}
+                      countryFlag={city.country.flag}
+                      countryName={city.country.name}
+                    />
                   </GridItem>
                 ))}
               </Grid>
