@@ -30,7 +30,7 @@ export default function ContinentPage() {
             title={continent.title}
           />
           <Content>
-            <SimpleGrid columns={2} spacing={10} w="100%">
+            <SimpleGrid columns={[1, 1, 2]} spacing={10} w="100%">
               <Text maxW="600" textAlign="justify">
                 {continent.description}
               </Text>

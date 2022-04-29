@@ -15,7 +15,6 @@ export function CityCard({
 }: CityCardProps) {
   return (
     <Box
-      maxW="sm"
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"

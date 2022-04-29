@@ -18,7 +18,7 @@ export function Content({
       width="100%"
       mx="auto"
       my={addMarginY ? "10" : "0"}
-      px={addPaddingX ? 14 : 0}
+      px={addPaddingX ? ["6", "8", "14"] : 0}
       {...props}
     >
       {children}
