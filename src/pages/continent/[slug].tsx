@@ -31,7 +31,7 @@ export default function ContinentPage() {
           />
           <Content>
             <SimpleGrid columns={[1, 1, 2]} spacing={10} w="100%">
-              <Text maxW="600" textAlign="justify">
+              <Text textAlign="justify">
                 {continent.description}
               </Text>
               <Flex justifyContent="space-around">
