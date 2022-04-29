@@ -13,7 +13,7 @@ export function ContinentBanner({
   return (
     <Flex
       w="100%"
-      h="500"
+      h={["300px", "400px", "500px"]}
       bgImage={`linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImage})`}
       backgroundSize="cover"
       color="gray.100"
@@ -21,8 +21,13 @@ export function ContinentBanner({
       backgroundPosition={["center", "center"]}
     >
       <Content>
-        <Flex direction="column" justify="flex-end">
-          <Text fontSize="4xl" fontWeight="medium">
+        <Flex
+          direction="column"
+          justifyContent={["center", "flex-end", "flex-end"]}
+          alignItems={["center", "flex-start", "flex-start"]}
+          w="100%"
+        >
+          <Text fontSize={["5xl"]} fontWeight="medium">
             {title}
           </Text>
         </Flex>
